@@ -28,11 +28,24 @@
     color:skyblue;
 
 }
+.pagination{
+    display: flex;
+    justify-content: center;
+    margin: 50px 10px;
+    
+}
+.pg-btn{
+    background-color: orange;
+    border-radius: 50%;
+    padding: 10px;
+    margin: 5px;
+    
+}
 .content{
     display:flex;
     justify-content: space-between;
-    margin: 140px;
-    margin-top: 100px;
+    align-items: center;
+    margin: 50px 100px;
 }
 .btn-primary{
     background-color: black;
@@ -75,33 +88,55 @@
 .power-container{
     display:flex;
     gap:28.29px;
-    margin:131px;
+  margin: 20px 30px;
 }
 .skill{
-    padding:40px;
+    padding:15px;
     border-radius: 15px;
     box-shadow: 0px 5px 50px 0px whitesmoke;
 
 }
+.main{
+    max-width: 1280px;
+    margin: 100px auto;
+}
+.story-title{
+    font-size: 24px;
+    text-align: center;
+}
+.kids-card{
+    display: grid;
+   
+    gap: 10px;
+    grid-template-columns: repeat(3 ,1fr);
+}
+.kid-card1{
+    grid-row: span 2;
+}
 .inner-shadow{
-    background-color: rgba(222, 245, 255, 1);
+    background: linear-gradient(rgba(222, 245, 255, 1),rgb(252, 252, 252));
 }
 .in-shadow{
-    background-color:rgba(255, 244, 220, 1) ;
+    background: linear-gradient(rgba(255, 244, 220, 1),rgb(255, 255, 255));
 }
 .low-shadow{
-    background-color:rgba(242, 232, 255, 1);
+    background: linear-gradient(rgba(242, 232, 255, 1),rgb(255, 255, 255));
 }
 .foot{
-    display:flex;
+   display: flex;
+   
+}
+.viewBtn{
+    text-align: center;
 }
 .around{
     background-color: rgba(1, 172, 253, 1);
-    border: 190px;
+   padding: 50px;
     
 }
 .kids-container{
-    background-color: rgb(238, 221, 193);
+
+    background: linear-gradient(rgba(255,255,255),rgb(238, 221, 193));
 }
 .feature-title{
     text-align: center;
@@ -112,3 +147,137 @@
     padding:10px 47px;
     border-radius: 12px;
 }
+.hamburg{
+    display: none;
+}
+/* General Responsive Styling */
+@media screen and (max-width: 996px) {
+    .hamburg{
+        display: none;
+    }
+    /* Navbar Adjustments */
+    .kids-school {
+      justify-content: space-between;
+      padding: 10px;
+    }
+    .home-page {
+      display: none; 
+    }
+    .btn-secondary {
+      font-size: 16px;
+      padding: 8px 50px;
+    }
+  
+
+    .content {
+      flex-direction: column-reverse;
+      margin: 20px;
+      text-align: center;
+    }
+    .banner-image {
+      width: 100%;
+      max-width: 400px;
+      margin: 0 auto;
+    }
+    .banner-content {
+      margin-top: 20px;
+    }
+  }
+  
+  @media screen and (max-width: 768px) {
+    .kids-card{
+        display: grid;
+      grid-template-columns: repeat(1,1fr);
+      justify-content: center;
+    }
+    .kid-card1{
+        display: none;
+    }
+    .pagination{
+        display: none;
+    }
+    .hamburg{
+        display: inline;
+    }
+    .schools{
+        display: none;
+    }
+    .contact-btn{
+        display: none;
+    }
+    /* Navbar Mobile View */
+    .kids-school i {
+      display: block;
+    }
+  
+    /* Standard Curriculum Section */
+    .power-container {
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+      margin: 20px;
+    }
+   
+  
+    /* Our Stories Section */
+    .kids-container {
+      padding: 20px;
+    }
+    .kids-pic {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+    }
+  
+    /* Footer */
+    .foot {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+    .around section {
+      text-align: center;
+    }
+  }
+  
+  @media screen and (max-width: 576px) {
+    .kids-card{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+      }
+      .kid-card1{
+          display: none;
+      }
+    .pagination{
+        display: none;
+    }
+    .contact-btn{
+        display: none;
+    }
+    .schools{
+        display: none;
+    }
+    /* Navbar */
+    .kids-school img {
+      max-width: 100px;
+    }
+  
+    /* Banner Section */
+    .banner-content h1 {
+      font-size: 1.5rem;
+    }
+    .btn-primary {
+      font-size: 14px;
+      padding: 8px 20px;
+    }
+  
+    /* Our Stories Section */
+    .kids-pic {
+      grid-template-columns: 1fr;
+    }
+  
+    /* Footer */
+    .around {
+      padding: 10px;
+    }
+  }
